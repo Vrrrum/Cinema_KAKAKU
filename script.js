@@ -1,1 +1,1 @@
-console.log("witaj switchu")
+console.log("kuba pedzio");
