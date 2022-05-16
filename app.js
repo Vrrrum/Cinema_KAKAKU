@@ -1,3 +1,4 @@
+const path = require("path");
 const express = require("express");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
@@ -19,6 +20,22 @@ if (process.env.NODE_ENV === "development") {
 // Handlebars
 app.engine(".hbs", exphbs.engine({ defaultLayouts: "main", extname: ".hbs" }));
 app.set("view engine", ".hbs");
+
+// Bootstrap
+app.use(
+  "/css",
+  express.static(path.join(__dirname, "node_modules/bootstrap/dist/css"))
+);
+app.use(
+  "/js",
+  express.static(path.join(__dirname, "node_modules/bootstrap/dist/js"))
+);
+app.use(
+  "/js",
+  express.static(path.join(__dirname, "node_modules/jquery/dist"))
+);
+
+app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
 app.use("/", require("./routes/index"));
