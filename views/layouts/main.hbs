@@ -12,15 +12,45 @@
       content="kino, orzeł, orzel, filmy, seans, njalepsze, bilety"
     />
     <title>Kino Orzeł</title>
-
-    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="scss/style.css" />
   </head>
   <body>
-    <header class="p-3 bg-primary text-white text-center">
-      <p>Kino orzeł</p>
+    <header class="p-3 text-white text-left">
+      <p>KINO ORZEŁ</p>
     </header>
+    <nav class="navbar navbar-expand-lg text-center">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbar"
+        aria-controls="navbar"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">REPERTUAR
+          <a class="nav-item nav-link" href="#">OFERTA</a>
+          <a class="nav-item nav-link" href="#">CENNIK</a>
+          <a class="nav-item nav-link" href="#">KONTAKT</a>
+        </div>
+      </div>
+    </nav>
     {{{body}}}
 
-    <script src="../../node_modules/po"></script>
   </body>
 </html>

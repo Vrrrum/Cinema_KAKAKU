@@ -1,0 +1,22 @@
+$background: #3c1249;
+$menu: #a1e619;
+$footerAndDropdown-menu: #669900;
+$primary-font: #ffffff;
+$secondary-font: #000000;
+
+body {
+  color: white;
+  background: $background;
+}
+
+header {
+  font-size: 40px;
+}
+
+nav {
+  background-color: $menu;
+}
+
+.choose-cinema {
+  font-size: 20px;
+}
