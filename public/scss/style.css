@@ -41,4 +41,8 @@ aside p {
 footer {
   background-color: #a1e619;
 }
+
+.carousel-item{
+  opacity: 0.9;
+}
 /*# sourceMappingURL=style.css.map */
