@@ -1,87 +1,120 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="authors"
-      content="Jakub Sierant, Kacper Sierant, Kamil Wojtek"
-    />
-    <meta
-      name="keywords"
-      content="kino, orzeł, orzel, filmy, seans, njalepsze, bilety"
-    />
-    <title>Kino Orzeł</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="scss/style.css" />
-  </head>
-  <body>
-  
-       <header class="row">
-     
-          <h1 class="col-sm d-block p-5">KINO ORZEŁ</h1>
-          <div class="col-sm text-end" ><img src="img/logo/kononowicz.jpg" alt="Logo"></div>
-          
-    </header> 
-     <nav class="row">
-        <div class="col-sm text-center pt-3 pb-3"><a href="#">REPERTUAR</a></div>
-        <div class="col-sm text-center pt-3 pb-3"><a href="#">OFERTA</a></div>
-        <div class="col-sm text-center pt-3 pb-3"><a href="#">CENNIK</a></div>
-        <div class="col-sm text-center pt-3 pb-3"><a href="#">KONTAKT</a></div>
-        <div class="col-sm pt-3 ">{{{body}}}</div>
-    </nav>  
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="authors" content="Jakub Sierant, Kacper Sierant, Kamil Wojtek" />
+  <meta name="keywords" content="kino, orzeł, orzel, filmy, seans, njalepsze, bilety" />
+  <title>Kino Orzeł</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="scss/style.css" />
+</head>
+
+<body>
+
+  <header class="row">
+
+    <h1 class="col-sm d-block p-5">KINO ORZEŁ</h1>
+    <div class="col-sm text-end"><img src="img/logo/kononowicz.jpg" alt="Logo"></div>
+
+  </header>
+
+  <div class="container-fluid m-0 p-0">
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/posters/to-nie-wypandaa.png" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="img/posters/doktor-strange.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="img/posters/my-singing-monsters.jpg" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <nav class="row">
+    <div class="col-sm text-center pt-3 pb-3"><a href="#">REPERTUAR</a></div>
+    <div class="col-sm text-center pt-3 pb-3"><a href="#">OFERTA</a></div>
+    <div class="col-sm text-center pt-3 pb-3"><a href="#">CENNIK</a></div>
+    <div class="col-sm text-center pt-3 pb-3"><a href="#">KONTAKT</a></div>
+    <div class="col-sm pt-3 ">{{{body}}}</div>
+  </nav>
 
 
-    <aside class=" float-end p-3 pe-4  w-25 h-100 ">
-      <div clas="h-25">
-          <h3 class="text-center text-decoration-underline display-3 pb-3">Informacje</h3>
-            <p class="position-static">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit fugiat et consectetur beatae aut saepe molestias consequatur laboriosam pariatur, necessitatibus sint officia velit sed qui deserunt iure ullam nobis quia assumenda sapiente nesciunt adipisci illo similique rerum! Repudiandae, in delectus earum necessitatibus vel impedit. Est tempore provident odit ab dolorem nostrum maiores nobis ratione iusto quibusdam, saepe quam porro possimus vel eligendi doloremque ducimus modi magnam laboriosam blanditiis? Natus vero quod labore fuga aspernatur. Possimus aspernatur unde in aliquid libero ipsam autem temporibus molestiae cum cumque quibusdam voluptatum velit totam nihil eaque recusandae, mollitia optio exercitationem ab magnam harum pariatur!</p>
-      </div>
-      <div clas="h-25">
-          <h3 class="text-center text-decoration-underline display-3 pb-3">Informacje</h3>
-            <p class="position-static"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit fugiat et consectetur beatae aut saepe molestias consequatur laboriosam pariatur, necessitatibus sint officia velit sed qui deserunt iure ullam nobis quia assumenda sapiente nesciunt adipisci illo similique rerum! Repudiandae, in delectus earum necessitatibus vel impedit. Est tempore provident odit ab dolorem nostrum maiores nobis ratione iusto quibusdam, saepe quam porro possimus vel eligendi doloremque ducimus modi magnam laboriosam blanditiis? Natus vero quod labore fuga aspernatur. Possimus aspernatur unde in aliquid libero ipsam autem temporibus molestiae cum cumque quibusdam voluptatum velit totam nihil eaque recusandae, mollitia optio exercitationem ab magnam harum pariatur!</p>
-      </div>
-    </aside>
+  <aside class=" float-end p-3 pe-4  w-25 h-100 ">
+    <div clas="h-25">
+      <h3 class="text-center text-decoration-underline display-3 pb-3">Informacje</h3>
+      <p class="position-static">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit fugiat et consectetur
+        beatae aut saepe molestias consequatur laboriosam pariatur, necessitatibus sint officia velit sed qui deserunt
+        iure ullam nobis quia assumenda sapiente nesciunt adipisci illo similique rerum! Repudiandae, in delectus earum
+        necessitatibus vel impedit. Est tempore provident odit ab dolorem nostrum maiores nobis ratione iusto quibusdam,
+        saepe quam porro possimus vel eligendi doloremque ducimus modi magnam laboriosam blanditiis? Natus vero quod
+        labore fuga aspernatur. Possimus aspernatur unde in aliquid libero ipsam autem temporibus molestiae cum cumque
+        quibusdam voluptatum velit totam nihil eaque recusandae, mollitia optio exercitationem ab magnam harum pariatur!
+      </p>
+    </div>
+    <div clas="h-25">
+      <h3 class="text-center text-decoration-underline display-3 pb-3">Informacje</h3>
+      <p class="position-static"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit fugiat et consectetur
+        beatae aut saepe molestias consequatur laboriosam pariatur, necessitatibus sint officia velit sed qui deserunt
+        iure ullam nobis quia assumenda sapiente nesciunt adipisci illo similique rerum! Repudiandae, in delectus earum
+        necessitatibus vel impedit. Est tempore provident odit ab dolorem nostrum maiores nobis ratione iusto quibusdam,
+        saepe quam porro possimus vel eligendi doloremque ducimus modi magnam laboriosam blanditiis? Natus vero quod
+        labore fuga aspernatur. Possimus aspernatur unde in aliquid libero ipsam autem temporibus molestiae cum cumque
+        quibusdam voluptatum velit totam nihil eaque recusandae, mollitia optio exercitationem ab magnam harum pariatur!
+      </p>
+    </div>
+  </aside>
 
-    <article>
-      <div class="row ">
-        <section class="col-sm p-3 text-center">
-          <a href="#">
-            <img class="h-100 w-75" src="img/posters/jojo-rabit.jpg" alt="Logo">
-          </a>
-        </section>
-        <section class="col-sm p-3 text-center">
-           <a href="#">
-             <img class="h-100 w-75" src="img/posters/magnaci-i-czarodzieje.jpg" alt="Logo">
-            </a>
-        </section>
-      </div>
-      <div class="row">
-        <section class="col-sm p-3 text-center">
-          <a href="#">
-            <img class="h-100 w-75" src="img/posters/ninjesus.jpg" alt="Logo">
-          </a>
-        </section>
-        <section class="col-sm  p-3 text-center">
-           <a href="#">
-             <img class="h-100 w-75" src="img/posters/jewjitsu.jpg" alt="Logo">
-            </a>
-        </section>
-      </div>
-    </article>
-  <footer class="p-3" >
+  <article>
+    <div class="row ">
+      <section class="col-sm p-3 text-center">
+        <a href="#">
+          <img class="h-100 w-75" src="img/posters/jojo-rabit.jpg" alt="Logo">
+        </a>
+      </section>
+      <section class="col-sm p-3 text-center">
+        <a href="#">
+          <img class="h-100 w-75" src="img/posters/magnaci-i-czarodzieje.jpg" alt="Logo">
+        </a>
+      </section>
+    </div>
+    <div class="row">
+      <section class="col-sm p-3 text-center">
+        <a href="#">
+          <img class="h-100 w-75" src="img/posters/ninjesus.jpg" alt="Logo">
+        </a>
+      </section>
+      <section class="col-sm  p-3 text-center">
+        <a href="#">
+          <img class="h-100 w-75" src="img/posters/jewjitsu.jpg" alt="Logo">
+        </a>
+      </section>
+    </div>
+  </article>
+  <footer class="p-3 w-100">
     <p class="text-center">Copyrightⓒ 2022</p>
   </footer>
 
-  </body>
+</body>
+
 </html>
