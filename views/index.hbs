@@ -1,14 +1,167 @@
-<main class="container">
-  <div class="row">
-    <div class="col">
-      <div class="choose-cinema">
-        <label for="cinema">WYBIERZ KINO: </label>
-        <select name="cinema" id="cinema">
-          <option value="gliwice">Gliwice</option>
-          <option value="zabrze">Zabrze</option>
-          <option value="bydgoszcz">Bydgoszcz</option>
-        </select>
+<main class="container-fluid p-0">
+
+  {{! Slider }}
+  <div
+    id="carouselExampleControls"
+    class="carousel slide w-100"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="img/posters/to-nie-wypandaa.png"
+          class="d-block w-100"
+          alt="..."
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="img/posters/doktor-strange.jpg"
+          class="d-block w-100"
+          alt="..."
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="img/posters/my-singing-monsters.jpg"
+          class="d-block w-100"
+          alt="..."
+        />
       </div>
     </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleControls"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleControls"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
+
+  <div class="row p-10">
+    <div class="col"><h2>REPERTUAR</h2></div>
+    <div class="col text-end">
+      <label for="kino">Wybierz kino: </label>
+      <select id="kino">
+        <option value="gliwice">Gliwice</option>
+        <option value="zabrze">Zabrze</option>
+        <option value="bydgoszcz">Bydgoszcz</option>
+      </select>
+    </div>
+  </div>
+<<<<<<< HEAD
+=======
+
+  {{!-- {{! informacje }}
+  <aside class="float-end p-3 pe-4 w-25 h-100">
+    <div clas="h-25">
+      <h3
+        class="text-center text-decoration-underline display-3 pb-3"
+      >Informacje</h3>
+      <p class="position-static">Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Odit fugiat et consectetur beatae aut saepe molestias
+        consequatur laboriosam pariatur, necessitatibus sint officia velit sed
+        qui deserunt iure ullam nobis quia assumenda sapiente nesciunt adipisci
+        illo similique rerum! Repudiandae, in delectus earum necessitatibus vel
+        impedit. Est tempore provident odit ab dolorem nostrum maiores nobis
+        ratione iusto quibusdam, saepe quam porro possimus vel eligendi
+        doloremque ducimus modi magnam laboriosam blanditiis? Natus vero quod
+        labore fuga aspernatur. Possimus aspernatur unde in aliquid libero ipsam
+        autem temporibus molestiae cum cumque quibusdam voluptatum velit totam
+        nihil eaque recusandae, mollitia optio exercitationem ab magnam harum
+        pariatur!
+      </p>
+    </div>
+    <div clas="h-25">
+      <h3
+        class="text-center text-decoration-underline display-3 pb-3"
+      >Informacje</h3>
+      <p class="position-static">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit fugiat et
+        consectetur beatae aut saepe molestias consequatur laboriosam pariatur,
+        necessitatibus sint officia velit sed qui deserunt iure ullam nobis quia
+        assumenda sapiente nesciunt adipisci illo similique rerum! Repudiandae,
+        in delectus earum necessitatibus vel impedit. Est tempore provident odit
+        ab dolorem nostrum maiores nobis ratione iusto quibusdam, saepe quam
+        porro possimus vel eligendi doloremque ducimus modi magnam laboriosam
+        blanditiis? Natus vero quod labore fuga aspernatur. Possimus aspernatur
+        unde in aliquid libero ipsam autem temporibus molestiae cum cumque
+        quibusdam voluptatum velit totam nihil eaque recusandae, mollitia optio
+        exercitationem ab magnam harum pariatur!
+      </p>
+    </div>
+  </aside>
+
+  {{! Plakaty }}
+  <article>
+    <div class="row">
+      <section class="col-sm p-3 text-center">
+        <a href="#">
+          <img class="h-100 w-75" src="img/posters/jojo-rabit.jpg" alt="Logo" />
+        </a>
+      </section>
+      <section class="col-sm p-3 text-center">
+        <a href="#">
+          <img
+            class="h-100 w-75"
+            src="img/posters/magnaci-i-czarodzieje.jpg"
+            alt="Logo"
+          />
+        </a>
+      </section>
+    </div>
+    <div class="row">
+      <section class="col-sm p-3 text-center">
+        <a href="#">
+          <img class="h-100 w-75" src="img/posters/ninjesus.jpg" alt="Logo" />
+        </a>
+      </section>
+      <section class="col-sm p-3 text-center">
+        <a href="#">
+          <img class="h-100 w-75" src="img/posters/jewjitsu.jpg" alt="Logo" />
+        </a>
+      </section>
+    </div>
+  </article> --}}
+
+  <div class="container-fluid">
+    <section class="row">
+      <div class="col-2 poster">
+        <a href="#">
+          <img class="w-100" src="img/posters/jewjitsu.jpg" alt="Logo" />
+        </a>
+      </div>
+      <div class="col info">
+        <h3>Jew-jitsu</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit fugiat
+          et consectetur beatae aut saepe molestias consequatur laboriosam
+          pariatur, necessitatibus sint officia velit sed qui deserunt iure
+          ullam nobis quia assumenda sapiente nesciunt adipisci illo similique
+          rerum! Repudiandae, in delectus earum necessitatibus vel impedit. Est
+          tempore provident odit ab dolorem nostrum maiores nobis ratione iusto
+          quibusdam, saepe quam porro possimus vel eligendi doloremque ducimus
+          modi magnam laboriosam blanditiis? Natus vero quod labore fuga
+          aspernatur. Possimus aspernatur unde in aliquid libero ipsam autem
+          temporibus molestiae cum cumque quibusdam voluptatum velit totam nihil
+          eaque recusandae, mollitia optio exercitationem ab magnam harum
+          pariatur!</p>
+      </div>
+      <div class="col schedule">
+
+      </div>
+    </section>
+  </div>
+
+>>>>>>> 32c7d8d4bae5f6e5e1d9372d37e1cdebd8dce359
 </main>

@@ -9,26 +9,33 @@ router.get("/", (req, res) => {
 
 // @desc    Oferta
 // @route   GET /offers
-router.get("/", (req, res) => {
+router.get("/offers", (req, res) => {
   res.render("offers");
 });
 
 // @desc    Cennik
 // @route   GET /price-list
-router.get("/", (req, res) => {
+router.get("/price-list", (req, res) => {
   res.render("price-list");
 });
 
 // @desc    Kontakt
 // @route   GET /contact
-router.get("/", (req, res) => {
+router.get("/contact", (req, res) => {
   res.render("contact");
 });
 
-// @desc    Kontakt
+// @desc    login
 // @route   GET /login
-router.get("/", (req, res) => {
+router.get("/login", (req, res) => {
   res.render("login");
+});
+
+// @desc    auth
+// @route   POST /auth
+router.get("/auth", (req, res) => {
+  let username = req.body.email;
+  let password = req.body.password;
 });
 
 module.exports = router;
