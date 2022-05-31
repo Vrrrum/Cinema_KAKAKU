@@ -1,6 +1,7 @@
 body {
   color: white;
   background: #3c1249;
+  position: relative;
 }
 
 header {
@@ -13,6 +14,10 @@ nav {
 
 .choose-cinema {
   font-size: 20px;
+}
+
+.repertuar{
+  background-color: #a1e619;
 }
 
 nav a {
@@ -38,7 +43,10 @@ aside p {
   border-radius: 35px;
 }
 
-footer {
+.footer-bs{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
   background-color: #a1e619;
 }
 
