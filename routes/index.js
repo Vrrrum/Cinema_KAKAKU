@@ -25,7 +25,7 @@ router.get("/", (req, res) => {
   res.render("contact");
 });
 
-// @desc    Kontakt
+// @desc    login
 // @route   GET /login
 router.get("/", (req, res) => {
   res.render("login");

@@ -1,10 +1,11 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const moviesSchema = new Schema({
-  title: String,
-  genre: String,
-  description: String,
+const usersSchema = new Schema({
+  login: String,
+  email: String,
+  password: String,
+  tickets: 
 });
 
 const Movie = mongoose.model("Movie", moviesSchema);
