@@ -3,6 +3,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
 const exphbs = require("express-handlebars");
+const bodyParser = require("body-parser");
 const connectDB = require("./config/db");
 
 // Load config
@@ -20,8 +21,10 @@ if (process.env.NODE_ENV === "development") {
 // Handlebars
 app.engine(".hbs", exphbs.engine({ defaultLayouts: "main", extname: ".hbs" }));
 app.set("view engine", ".hbs");
-
 app.use(express.static(path.join(__dirname, "public")));
+
+// Body parser
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
 app.use("/", require("./routes/index"));

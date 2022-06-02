@@ -1,14 +1,31 @@
 <div class="container p-0">
   <div class="row">
     <div class="col text-center">
-      <form action="/auth">
+      <h2>Zaloguj</h2>
+      <form action="/login" method="post">
         <label for="email">Email</label>
         <input type="email" name="email" id="email" /><br />
         <label for="password">Hasło</label>
         <input type="password" name="password" id="password" />
         <br />
+        <input type="submit" value="login" />
+      </form>
+    </div>
 
-        <input type="submit" value="Zaloguj" />
+    <div class="col text-center">
+      <h2>Zarejstrój</h2>
+      <div class="alert aletr-danger" role="alert">{{error}}</div>
+      <form action="/login" method="post">
+        <label for="login">Login</label>
+        <input type="login" name="login" id="login" /><br />
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" /><br />
+        <label for="password">Hasło</label>
+        <input type="password" name="password" id="password" /><br />
+        <label for="re-password">Powtórz hasło</label>
+        <input type="password" name="rePassword" id="re-password" />
+        <br />
+        <input type="submit" name="action" value="register" />
       </form>
     </div>
   </div>
