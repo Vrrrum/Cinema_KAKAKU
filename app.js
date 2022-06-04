@@ -5,6 +5,7 @@ const morgan = require("morgan");
 const exphbs = require("express-handlebars");
 const bodyParser = require("body-parser");
 const connectDB = require("./config/db");
+const session = require("express-session");
 
 // Load config
 dotenv.config({ path: "./config/config.env" });
@@ -22,6 +23,15 @@ if (process.env.NODE_ENV === "development") {
 app.engine(".hbs", exphbs.engine({ defaultLayouts: "main", extname: ".hbs" }));
 app.set("view engine", ".hbs");
 app.use(express.static(path.join(__dirname, "public")));
+
+// Session
+app.use(
+  session({
+    secret: "key",
+    resave: true,
+    saveUninitialized: true,
+  })
+);
 
 // Body parser
 app.use(bodyParser.urlencoded({ extended: true }));

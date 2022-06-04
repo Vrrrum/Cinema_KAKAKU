@@ -51,9 +51,14 @@
 
   <div class="row p-10">
     <div class="col"><h2>REPERTUAR</h2></div>
+    <div class="col text-center"><input
+        type="date"
+        name="date"
+        id="datePicker"
+      /></div>
     <div class="col text-end">
-      <label for="kino">Wybierz kino: </label>
-      <select id="kino">
+      <label for="cinema">Wybierz kino: </label>
+      <select id="cinema">
         <option value="gliwice">Gliwice</option>
         <option value="zabrze">Zabrze</option>
         <option value="bydgoszcz">Bydgoszcz</option>
@@ -61,99 +66,16 @@
     </div>
   </div>
 
-  {{!-- {{! informacje }}
-  <aside class="float-end p-3 pe-4 w-25 h-100">
-    <div clas="h-25">
-      <h3
-        class="text-center text-decoration-underline display-3 pb-3"
-      >Informacje</h3>
-      <p class="position-static">Lorem, ipsum dolor sit amet consectetur
-        adipisicing elit. Odit fugiat et consectetur beatae aut saepe molestias
-        consequatur laboriosam pariatur, necessitatibus sint officia velit sed
-        qui deserunt iure ullam nobis quia assumenda sapiente nesciunt adipisci
-        illo similique rerum! Repudiandae, in delectus earum necessitatibus vel
-        impedit. Est tempore provident odit ab dolorem nostrum maiores nobis
-        ratione iusto quibusdam, saepe quam porro possimus vel eligendi
-        doloremque ducimus modi magnam laboriosam blanditiis? Natus vero quod
-        labore fuga aspernatur. Possimus aspernatur unde in aliquid libero ipsam
-        autem temporibus molestiae cum cumque quibusdam voluptatum velit totam
-        nihil eaque recusandae, mollitia optio exercitationem ab magnam harum
-        pariatur!
-      </p>
-    </div>
-    <div clas="h-25">
-      <h3
-        class="text-center text-decoration-underline display-3 pb-3"
-      >Informacje</h3>
-      <p class="position-static">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit fugiat et
-        consectetur beatae aut saepe molestias consequatur laboriosam pariatur,
-        necessitatibus sint officia velit sed qui deserunt iure ullam nobis quia
-        assumenda sapiente nesciunt adipisci illo similique rerum! Repudiandae,
-        in delectus earum necessitatibus vel impedit. Est tempore provident odit
-        ab dolorem nostrum maiores nobis ratione iusto quibusdam, saepe quam
-        porro possimus vel eligendi doloremque ducimus modi magnam laboriosam
-        blanditiis? Natus vero quod labore fuga aspernatur. Possimus aspernatur
-        unde in aliquid libero ipsam autem temporibus molestiae cum cumque
-        quibusdam voluptatum velit totam nihil eaque recusandae, mollitia optio
-        exercitationem ab magnam harum pariatur!
-      </p>
-    </div>
-  </aside>
-
-  {{! Plakaty }}
-  <article>
-    <div class="row">
-      <section class="col-sm p-3 text-center">
-        <a href="#">
-          <img class="h-100 w-75" src="img/posters/jojo-rabit.jpg" alt="Logo" />
-        </a>
-      </section>
-      <section class="col-sm p-3 text-center">
-        <a href="#">
-          <img
-            class="h-100 w-75"
-            src="img/posters/magnaci-i-czarodzieje.jpg"
-            alt="Logo"
-          />
-        </a>
-      </section>
-    </div>
-    <div class="row">
-      <section class="col-sm p-3 text-center">
-        <a href="#">
-          <img class="h-100 w-75" src="img/posters/ninjesus.jpg" alt="Logo" />
-        </a>
-      </section>
-      <section class="col-sm p-3 text-center">
-        <a href="#">
-          <img class="h-100 w-75" src="img/posters/jewjitsu.jpg" alt="Logo" />
-        </a>
-      </section>
-    </div>
-  </article> --}}
-
   <div class="container-fluid">
     <section class="row">
       <div class="col-2 poster">
         <a href="#">
-          <img class="w-100" src="img/posters/jewjitsu.jpg" alt="Logo" />
+          <img class="w-100" src="{{imgSrc}}" alt="Logo" />
         </a>
       </div>
       <div class="col info">
-        <h3>Jew-jitsu</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit fugiat
-          et consectetur beatae aut saepe molestias consequatur laboriosam
-          pariatur, necessitatibus sint officia velit sed qui deserunt iure
-          ullam nobis quia assumenda sapiente nesciunt adipisci illo similique
-          rerum! Repudiandae, in delectus earum necessitatibus vel impedit. Est
-          tempore provident odit ab dolorem nostrum maiores nobis ratione iusto
-          quibusdam, saepe quam porro possimus vel eligendi doloremque ducimus
-          modi magnam laboriosam blanditiis? Natus vero quod labore fuga
-          aspernatur. Possimus aspernatur unde in aliquid libero ipsam autem
-          temporibus molestiae cum cumque quibusdam voluptatum velit totam nihil
-          eaque recusandae, mollitia optio exercitationem ab magnam harum
-          pariatur!</p>
+        <h3>{{title}}</h3>
+        <p>{{description}}</p>
       </div>
       <div class="col schedule">
 
@@ -162,3 +84,5 @@
   </div>
 
 </main>
+
+<script src="js/schedule.js"></script>

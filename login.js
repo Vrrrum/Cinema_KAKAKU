@@ -1,4 +1,3 @@
-const { hash } = require("bcrypt");
 const bcrypt = require("bcrypt");
 const User = require("./models/Users");
 
@@ -24,13 +23,18 @@ const doesElementExist = async (element) => {
 
 const signIn = async (email, password) => {
   try {
-    if (!(await doesElementExist(email))) {
-      const user = await User.find({ email: email });
-      const hashPassword = await user[0].password;
-      const loginResult = await bcrypt.compare(password, hashPassword);
+    if (typeof email != "string") {
+      throw new Error("Wrong type of 'emial' string");
+    } else if (typeof password != "string") {
+      throw new Error("Wrong type of 'password' string");
+    }
 
-      return { result: loginResult, user: user };
-    } else throw new Error("This email has been used before");
+    const user = await User.find({ email: email });
+    console.log(user);
+    const hashPassword = await user[0].password;
+    const loginResult = await bcrypt.compare(password, hashPassword);
+
+    return { result: loginResult, user: user };
   } catch (error) {
     console.log(error);
   }
@@ -38,6 +42,14 @@ const signIn = async (email, password) => {
 
 const signUp = async (login, email, password, rePassword) => {
   try {
+    if (email === "") {
+      throw new Error("Email cannot be blank");
+    } else if (password === "") {
+      throw new Error("Password cannot be blank");
+    } else if (login === "") {
+      throw new Error("Login cannot be blank");
+    }
+
     if (await compareText(password, rePassword)) {
       const hash = await bcrypt.hash(password, 10);
 
@@ -48,7 +60,7 @@ const signUp = async (login, email, password, rePassword) => {
         createdAt: Date.now(),
       });
 
-      user.save();
+      await user.save();
     } else throw new Error("Passwords doesn't match");
   } catch (error) {
     console.log(error);
