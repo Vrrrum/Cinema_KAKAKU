@@ -34,15 +34,21 @@ div label {
 aside p {
   background-color: #1F0924;
   -webkit-box-shadow: 0 0 20px 10px #1F0924;
-          box-shadow: 0 0 20px 10px #1F0924;
+  box-shadow: 0 0 20px 10px #1F0924;
   border-radius: 35px;
 }
 
 footer {
+  width: 100%;
   background-color: #a1e619;
 }
 
-.carousel-item{
+.btn {
+  background-color: #a1e619;
+}
+
+.carousel-item {
   opacity: 0.9;
 }
+
 /*# sourceMappingURL=style.css.map */
