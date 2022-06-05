@@ -68,7 +68,7 @@ router.post("/login", (req, res) => {
 // @desc    schedule getter
 // @route   GET /schedule
 router.get("/schedule", (req, res) => {
-  const { city, date } = req.body;
+  const { city, date } = req.query;
   getSchedule(city, date)
     .then((schedule) => {
       res.send({ schedule: schedule });
