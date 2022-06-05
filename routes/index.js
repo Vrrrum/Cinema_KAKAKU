@@ -2,7 +2,10 @@ const express = require("express");
 const session = require("express-session");
 const router = express.Router();
 const bcrypt = require("bcrypt");
-const { signIn, signUp } = require("../login");
+const {
+  signIn,
+  signUp
+} = require("../login");
 const User = require("../models/Users");
 const Schedule = require("../models/Schedule");
 const getSchedule = require("../getSchedule");
@@ -31,17 +34,28 @@ router.get("/contact", (req, res) => {
   res.render("contact");
 });
 
+// @desc    Bilety
+// @route   GET /buy-ticket
+router.get("/buy-ticket", (req, res) => {
+  res.render("buy-ticket");
+});
+
 // @desc    login
 // @route   GET /login
 router.get("/login", (req, res) => {
   res.render("login");
 });
 
+
+
 // @desc    login form
 // @route   POST /login
 router.post("/login", (req, res) => {
   if (req.body.action == "login") {
-    const { email, password } = req.body;
+    const {
+      email,
+      password
+    } = req.body;
 
     signIn(email, password)
       .then((result) => {
@@ -50,17 +64,26 @@ router.post("/login", (req, res) => {
         req.session.name = "logged";
       })
       .catch((e) => {
-        res.render("login", { RegError: e.message });
+        res.render("login", {
+          RegError: e.message
+        });
       });
   } else if (req.body.action == "register") {
-    const { login, email, password, rePassword } = req.body;
+    const {
+      login,
+      email,
+      password,
+      rePassword
+    } = req.body;
 
     signUp(login, email, password, rePassword)
       .then(() => {
         res.redirect("/");
       })
       .catch((e) => {
-        res.render("login", { LogError: e.message });
+        res.render("login", {
+          LogError: e.message
+        });
       });
   }
 });
@@ -68,10 +91,15 @@ router.post("/login", (req, res) => {
 // @desc    schedule getter
 // @route   GET /schedule
 router.get("/schedule", (req, res) => {
-  const { city, date } = req.query;
+  const {
+    city,
+    date
+  } = req.query;
   getSchedule(city, date)
     .then((schedule) => {
-      res.send({ schedule: schedule });
+      res.send({
+        schedule: schedule
+      });
     })
     .catch((e) => {
       console.log(e.message);
