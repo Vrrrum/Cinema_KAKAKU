@@ -55,6 +55,7 @@
         type="date"
         name="date"
         id="datePicker"
+        value=""
       /></div>
     <div class="col text-end">
       <label for="cinema">Wybierz kino: </label>
@@ -66,23 +67,29 @@
     </div>
   </div>
 
-  <div class="container-fluid">
-    <section class="row">
+  <div class="container-fluid" id="schedule-container">
+    {{! <section class="row pb-5">
       <div class="col-2 poster">
         <a href="#">
-          <img class="w-100" src="{{imgSrc}}" alt="Logo" />
+          <img class="w-100" src="img/posters/jewjitsu.jpg" alt="Logo" />
         </a>
       </div>
       <div class="col info">
-        <h3>{{title}}</h3>
-        <p>{{description}}</p>
+        <h3>Jew-Jitsu</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis
+          impedit ipsum odio explicabo fugit tempora, omnis inventore quis
+          possimus adipisci, illo voluptatibus quidem vel magni itaque ipsam
+          maxime harum sit. Laudantium amet dicta dignissimos voluptate nam.</p>
       </div>
       <div class="col schedule">
-
+        <div class="border rounded text-center mb-3">11:00</div>
+        <form action="/buy-ticket?movie=jew-jitsu&date=date"></form>
+        <button type="submit" class="btn buy-ticket">KUP BILET</button>
       </div>
-    </section>
+    </section> }}
+
   </div>
 
 </main>
-
+<script src="js/main.js"></script>
 <script src="js/schedule.js"></script>

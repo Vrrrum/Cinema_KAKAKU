@@ -4,7 +4,6 @@ $footerAndDropdown-menu: #669900;
 $primary-font: #ffffff;
 $secondary-font: #000000;
 
-
 body {
   color: white;
   background: $background;
@@ -22,34 +21,46 @@ nav {
   font-size: 20px;
 }
 
-nav{
-a{
-  text-decoration: none;
-  color: white;
-  font-weight: 400;
-  font-size: x-large;
- :hover{
- color: white;
-}
-}
+.schedule {
+  font-size: 2rem;
 }
 
-div{
-  label{
+.buy-ticket {
+  background-color: #9d4fb5;
+  &:hover {
+    background-color: #6e3c7d;
+  }
+  &:active {
+    background-color: #d1addb;
+  }
+}
+nav {
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: x-large;
+    :hover {
+      color: white;
+    }
+  }
+}
+
+div {
+  label {
     font-size: x-large;
     font-weight: 400;
   }
 }
-  
-aside{
-    p{
-        background-color: #1F0924;
-        box-shadow: 0 0 20px 10px #1F0924;
-        border-radius:35px ;
-    } 
+
+aside {
+  p {
+    background-color: #1f0924;
+    box-shadow: 0 0 20px 10px #1f0924;
+    border-radius: 35px;
+  }
 }
 
-footer{
+footer {
   background-color: #a1e619;
 }
-
