@@ -6,6 +6,7 @@ const exphbs = require("express-handlebars");
 const bodyParser = require("body-parser");
 const connectDB = require("./config/db");
 const session = require("express-session");
+const { create } = require("connect-mongo");
 
 // Load config
 dotenv.config({ path: "./config/config.env" });
@@ -24,12 +25,16 @@ app.engine(".hbs", exphbs.engine({ defaultLayouts: "main", extname: ".hbs" }));
 app.set("view engine", ".hbs");
 app.use(express.static(path.join(__dirname, "public")));
 
+// creating 24 hours from milliseconds
+const oneDay = 1000 * 60 * 60 * 24;
+
 // Session
 app.use(
   session({
-    secret: "key",
-    resave: true,
+    secret: "wijdpdj0897214908709q290eurq0c98n701q92",
+    resave: false,
     saveUninitialized: true,
+    cookie: { maxAge: oneDay },
   })
 );
 

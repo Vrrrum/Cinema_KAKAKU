@@ -6,6 +6,7 @@ const { signIn, signUp } = require("../login");
 const User = require("../models/Users");
 const Schedule = require("../models/Schedule");
 const getSchedule = require("../getSchedule");
+const { redirect } = require("express/lib/response");
 
 // @desc    Strona główna
 // @route   GET /
@@ -40,29 +41,48 @@ router.get("/login", (req, res) => {
 // @desc    login form
 // @route   POST /login
 router.post("/login", (req, res) => {
+  // LOGIN
   if (req.body.action == "login") {
     const { email, password } = req.body;
+    console.log(password);
 
     signIn(email, password)
       .then((result) => {
-        console.log(result);
         res.redirect("/");
-        req.session.name = "logged";
-      })
-      .catch((e) => {
-        res.render("login", { RegError: e.message });
-      });
-  } else if (req.body.action == "register") {
-    const { login, email, password, rePassword } = req.body;
-
-    signUp(login, email, password, rePassword)
-      .then(() => {
-        res.redirect("/");
+        req.session.session.userid = result._id;
+        req.session.session.username = result.login;
       })
       .catch((e) => {
         res.render("login", { LogError: e.message });
       });
   }
+  // REGISTER
+  else if (req.body.action == "register") {
+    const { login, email, password, rePassword } = req.body;
+
+    signUp(login, email, password, rePassword)
+      .then(() => {
+        res.render("login", { RegError: "Zalogowano pomyślnie" });
+      })
+      .catch((e) => {
+        res.render("login", { RegError: e.message });
+      });
+  }
+});
+
+// @desc    logout
+// @route   GET /logout
+router.get("/logout", (req, res) => {
+  req.session.destroy();
+  res.redirect("/");
+});
+
+// @desc    logout
+// @route   POST /logout
+router.post("/getSession", (req, res) => {
+  const username = req.session.username;
+  res.send({ username: username });
+  console.log(req.session);
 });
 
 // @desc    schedule getter

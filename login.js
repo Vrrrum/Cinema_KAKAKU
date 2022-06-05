@@ -7,11 +7,12 @@ const compareText = (text, comparedText) => {
   });
 };
 
-const doesElementExist = async (element) => {
+// Checks if user exist
+const doesUserExist = async (email, login = null) => {
   try {
-    const user = await User.find({ email: element });
+    const user = await User.find({ $or: [{ email: email }, { login: login }] });
 
-    if (user[0].email !== undefined) {
+    if (user[0] !== undefined) {
       return true;
     }
 
@@ -22,46 +23,55 @@ const doesElementExist = async (element) => {
 };
 
 const signIn = async (email, password) => {
-  try {
-    if (typeof email != "string") {
-      throw new Error("Wrong type of 'emial' string");
-    } else if (typeof password != "string") {
-      throw new Error("Wrong type of 'password' string");
-    }
-
-    const user = await User.find({ email: email });
-    console.log(user);
-    const hashPassword = await user[0].password;
-    const loginResult = await bcrypt.compare(password, hashPassword);
-
-    return { result: loginResult, user: user };
-  } catch (error) {
-    console.log(error);
+  if (email === "") {
+    throw new Error("Email cannot be blank");
+  } else if (password === "") {
+    throw new Error("Password cannot be blank");
   }
+  if (!(await doesUserExist(email))) {
+    throw new Error("User doesn't exist");
+  }
+  console.log(password);
+
+  const user = await User.findOne({ email: email });
+  const hashPassword = await user.password;
+  const loginResult = await bcrypt.compare(password, hashPassword);
+
+  if (!loginResult) {
+    throw new Error("Wrong password");
+  }
+
+  return user;
 };
 
 const signUp = async (login, email, password, rePassword) => {
+  if (email === "") {
+    throw new Error("Email cannot be blank");
+  } else if (password === "") {
+    throw new Error("Password cannot be blank");
+  } else if (login === "") {
+    throw new Error("Login cannot be blank");
+  }
+
+  if (doesUserExist(email, login)) {
+    throw new Error("User with this email or passowrd alredy exists");
+  }
+  // await compareText(password, rePassword)
+  if (password !== rePassword) {
+    throw new Error("Passwords doesn't match");
+  }
+
   try {
-    if (email === "") {
-      throw new Error("Email cannot be blank");
-    } else if (password === "") {
-      throw new Error("Password cannot be blank");
-    } else if (login === "") {
-      throw new Error("Login cannot be blank");
-    }
+    const hash = await bcrypt.hash(password, 10);
 
-    if (await compareText(password, rePassword)) {
-      const hash = await bcrypt.hash(password, 10);
+    const user = new User({
+      login: login,
+      email: email,
+      password: hash,
+      createdAt: Date.now(),
+    });
 
-      const user = new User({
-        login: login,
-        email: email,
-        password: hash,
-        createdAt: Date.now(),
-      });
-
-      await user.save();
-    } else throw new Error("Passwords doesn't match");
+    await user.save();
   } catch (error) {
     console.log(error);
   }
