@@ -22,34 +22,36 @@ nav {
   font-size: 20px;
 }
 
-nav{
-a{
-  text-decoration: none;
-  color: white;
-  font-weight: 400;
-  font-size: x-large;
- :hover{
- color: white;
-}
-}
+nav {
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: x-large;
+
+    :hover {
+      color: white;
+    }
+  }
 }
 
-div{
-  label{
+div {
+  label {
     font-size: x-large;
     font-weight: 400;
   }
 }
-  
-aside{
-    p{
-        background-color: #1F0924;
-        box-shadow: 0 0 20px 10px #1F0924;
-        border-radius:35px ;
-    } 
+
+aside {
+  p {
+    background-color: #1F0924;
+    box-shadow: 0 0 20px 10px #1F0924;
+    border-radius: 35px;
+  }
 }
 
-footer{
+footer {
+  position: static;
+  bottom: 0;
   background-color: #a1e619;
 }
-
