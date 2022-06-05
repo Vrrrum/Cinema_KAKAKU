@@ -39,8 +39,8 @@ aside p {
 }
 
 footer {
-  width: 100%;
-  background-color: #a1e619;
+  position: static;
+  bottom: 0;
 }
 
 .btn {
