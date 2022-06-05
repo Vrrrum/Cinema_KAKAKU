@@ -46,7 +46,105 @@
 								</select>
 								<span class="select-arrow"></span>
 							</div>
-							
+ <div class="movie-container">
+      <label>Wybierz Film:</label>
+      <select id="movie">
+        <option value="19">Ninjesus</option>
+        <option value="19">JewJitsu</option>
+        <option value="19">Kung Fuhrer</option>
+        <option value="19">Magnaci i Czarodzieje</option>
+      </select>
+    </div>
+
+    <ul class="showcase">
+      <li>
+        <div class="seat"></div>
+        <small>Wolne</small>
+      </li>
+      <li>
+        <div class="seat selected"></div>
+        <small>Wybrane</small>
+      </li>
+      <li>
+        <div class="seat occupied"></div>
+        <small>Zajęte</small>
+      </li>
+    </ul>
+
+    <div class="container ">
+      <div class="screen"></div>
+
+      <div class="row d-flex justify-content-center">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat "></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat "></div>
+        <div class="seat "></div>
+        <div class="seat "></div>
+        <div class="seat"></div>
+      </div>
+    </div>
+
+    <p class="text d-flex justify-content-center">
+      Wybrałeś <span id="count">0</span> miejsc, które kosztują <span
+        id="total"
+        >0</span
+      >
+      <span>zł</span>
+    </p>
+
+
 							{{!-- <div class="form-btn">
 								<button class="submit-btn">Book Now</button>
 							</div> --}}
@@ -56,3 +154,4 @@
 			</div>
 		</div>
 	</div>
+        <script src="js/script.js"></script>
