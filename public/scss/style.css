@@ -50,17 +50,9 @@ div label {
 aside p {
   background-color: #1f0924;
   -webkit-box-shadow: 0 0 20px 10px #1f0924;
-          box-shadow: 0 0 20px 10px #1f0924;
+  box-shadow: 0 0 20px 10px #1f0924;
   border-radius: 35px;
 }
 
-<<<<<<< HEAD
 
-
-.btn {
-=======
-footer {
->>>>>>> 3344fb33f313043b16b66c092712955d8e21dbde
-  background-color: #a1e619;
-}
 /*# sourceMappingURL=style.css.map */
